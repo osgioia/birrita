@@ -12,7 +12,7 @@ function MyApp({ Component, pageProps }) {
     return (
         <>
             <Head>
-                <title>{process.env.PROJECT_TITLE}</title>
+                <title>Damián Catanzaro | Cafecito</title>
             </Head>
             <Component {...pageProps} />
         </>

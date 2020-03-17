@@ -8,8 +8,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMoon as moonSolid } from "@fortawesome/free-solid-svg-icons";
 import { faMoon as moonRegular } from "@fortawesome/free-regular-svg-icons";
 
-const user_twitter = "aioigzo"
-
 const Header = ({ countCoffees, prefersDark }) => {
     const [darkMode, setDarkMode] = useState("");
 
@@ -44,9 +42,8 @@ const Header = ({ countCoffees, prefersDark }) => {
             </div>
 
             <div className={style.twitter}>
-                <Follow username={user_twitter} />
-
-            </div>  
+                <Follow username="DamianCatanzaro" />
+            </div>
         </header>
     );
 };
