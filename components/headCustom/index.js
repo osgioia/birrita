@@ -11,9 +11,10 @@ const HeadCustom = ({ share }) => (
                 share && share._id ? "/coffee/" + share._id : ""
             }`}
         />
-        <meta property="og:title" content="Damián Catanzaro | Cafecito" />
+
+        <meta property="og:title" content={process.env.TITLE} />
         <meta name="og:description" content="" />
-        <meta property="og:site_name" content="Cafecito" />
+        <meta property="og:site_name" content={process.env.SITE_NAME} />
 
         {share && share._id && (
             <meta
@@ -25,9 +26,9 @@ const HeadCustom = ({ share }) => (
         <meta property="og:type" content="website" />
         <meta name="robots" content="noodp" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@DamianCatanzaro" />
-        <meta property="twitter:title" content="Damián Catanzaro | Cafecito" />
-        <meta name="twitter:creator" content="@DamianCatanzaro" />
+        <meta name="twitter:site" content={process.env.TWITTER} />
+        <meta property="twitter:title" content={`${process.env.NAME}|${process.env.TITLE}`}/>
+        <meta name="twitter:creator" content={process.env.TWITTER} />
         <meta name="twitter:description" content="" />
 
         {share && share._id && (
@@ -37,7 +38,7 @@ const HeadCustom = ({ share }) => (
             />
         )}
 
-        <meta itemProp="name" content="Damián Catanzaro | Cafecito" />
+        <meta itemProp="name" content={`${process.env.NAME}|${process.env.TITLE}`} />
         <meta itemProp="description" content="" />
 
         {share && share._id && (
