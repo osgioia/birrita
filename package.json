@@ -38,6 +38,7 @@
         "prop-types": "^15.7.2",
         "react": "^16.13.0",
         "react-dom": "^16.13.0",
+        "react-markdown": "^4.3.1",
         "react-twitter-widgets": "^1.7.1"
     },
     "devDependencies": {
@@ -47,6 +48,7 @@
         "eslint-plugin-react": "^7.19.0",
         "husky": "^4.2.3",
         "prettier": "1.19.1",
-        "pretty-quick": "^2.0.1"
+        "pretty-quick": "^2.0.1",
+        "raw-loader": "^4.0.0"
     }
 }
