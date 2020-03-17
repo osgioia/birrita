@@ -27,9 +27,9 @@ const Header = ({ countCoffees, prefersDark }) => {
             <div className={style.header}>
                 <div className={style.profileImg}></div>
                 <div className={style.informationContainer}>
-                    <div className={style.name}>@DamianCatanzaro</div>
+                <div className={style.name}>{process.env.NAME}</div>
                     <div className={style.countCoffees}>
-                        {countCoffees} cafecitos ☕️
+                        {countCoffees} birras 🍺
                     </div>
                 </div>
 

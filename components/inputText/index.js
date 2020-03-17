@@ -31,11 +31,11 @@ const InputText = () => {
         <header className={style.inputText}>
             {loading ? (
                 <div className={style.loading}>
-                    <span>Creando café...</span>
+                    <span>Creando birra...</span>
                 </div>
             ) : (
                 <>
-                    <span>¡Ayudame con un café ☕️!</span>
+                    <span>¡Ayudame con una birra 🍺!</span>
 
                     <div className={style.containerInputCoffee}>
                         <div className={style.imageCoffee}>
@@ -141,7 +141,7 @@ const InputText = () => {
                     ></textarea>
                     <button onClick={sendCoffee}>
                         {`Invitame ${tmpCountCoffees} ${
-                            parseInt(tmpCountCoffees) > 1 ? "cafés" : "café"
+                            parseInt(tmpCountCoffees) > 1 ? "birras" : "birra"
                         } ($${priceCoffee})`}
                     </button>
                 </>

@@ -29,7 +29,7 @@ class CoffeeController {
         }
 
         this.telegram.sendTelegramMessage(
-            `Cafecito | ☕️ New coffee | Name: ${name} | Message: ${message} | Count: ${countCoffees}`
+            `Birrita | 🍺 New Birra | Name: ${name} | Message: ${message} | Count: ${countCoffees}`
         );
 
         const result = await this.coffeeService.saveCoffee({
@@ -116,7 +116,7 @@ class CoffeeController {
                         this.coffeeService.createImageShare(coffee);
 
                         this.telegram.sendTelegramMessage(
-                            `Cafecito | ☕️ New Payment | Name: ${coffee.name} | Message: ${coffee.message} | Count: ${coffee.countCoffees}`
+                            `Birrita | 🍺 New Payment | Name: ${coffee.name} | Message: ${coffee.message} | Count: ${coffee.countCoffees}`
                         );
                     }
                 }
