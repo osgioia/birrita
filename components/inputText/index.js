@@ -24,7 +24,6 @@ const InputText = () => {
         window.location.href = result.data.mercadoPagoLink;
     };
 
-    
     const tmpCountCoffees = countCoffees ? countCoffees : 1;
     const priceCoffee = tmpCountCoffees * price;
 
@@ -36,8 +35,15 @@ const InputText = () => {
                 </div>
             ) : (
                 <>
-
-                    <span>¡Ayudame con una birra <img src='/static/imgs/emoji_birra.png' width="30px" height="30px"/>!</span>
+                    <span>
+                        ¡Ayudame con una birra{" "}
+                        <img
+                            src="/static/imgs/emoji_birra.png"
+                            width="30px"
+                            height="30px"
+                        />
+                        !
+                    </span>
 
                     <div className={style.containerInputCoffee}>
                         <div className={style.imageCoffee}>

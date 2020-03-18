@@ -10,20 +10,20 @@ class MercadoPagoService {
                         title: title,
                         quantity: 1,
                         currency_id: "ARS",
-                        unit_price: price
-                    }
+                        unit_price: price,
+                    },
                 ],
                 external_reference: {
-                    coffeeId
+                    coffeeId,
                 },
                 back_urls: {
-                    success: process.env.BACK_URL
+                    success: process.env.BACK_URL,
                 },
                 auto_return: "approved",
                 payment_methods: {
                     installments: 1,
-                    default_installments: 1
-                }
+                    default_installments: 1,
+                },
             }
         );
 

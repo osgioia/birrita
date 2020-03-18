@@ -6,9 +6,7 @@ dotenv.config({ path: envFile });
 
 const withSass = require("@zeit/next-sass");
 const withCSS = require("@zeit/next-css");
-const withImages = require('next-images')
-
-
+const withImages = require("next-images");
 
 module.exports = withCSS(
     withSass({
@@ -23,6 +21,6 @@ module.exports = withCSS(
             importLoaders: 1,
             localIdentName: "[local]__[hash:base64:5]",
         },
-        withImages: withImages()
+        withImages: withImages(),
     })
 );

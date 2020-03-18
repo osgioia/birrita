@@ -17,7 +17,6 @@ import { faCopy } from "@fortawesome/free-solid-svg-icons";
 
 import style from "./style.scss";
 
-
 const fetchCoffees = async query => {
     const arQueries = query || queryConvert();
 
@@ -213,7 +212,14 @@ class Home extends React.Component {
 
                 {!coffees.countCoffees && (
                     <div className={style.waitingCoffee}>
-                        <span>En espera <img src='/static/imgs/emoji_birra.png' width="30px" height="30px"/></span> 
+                        <span>
+                            En espera{" "}
+                            <img
+                                src="/static/imgs/emoji_birra.png"
+                                width="30px"
+                                height="30px"
+                            />
+                        </span>
                     </div>
                 )}
 
