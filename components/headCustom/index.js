@@ -27,7 +27,10 @@ const HeadCustom = ({ share }) => (
         <meta name="robots" content="noodp" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content={process.env.TWITTER} />
-        <meta property="twitter:title" content={`${process.env.NAME}|${process.env.TITLE}`}/>
+        <meta
+            property="twitter:title"
+            content={`${process.env.NAME}|${process.env.TITLE}`}
+        />
         <meta name="twitter:creator" content={process.env.TWITTER} />
         <meta name="twitter:description" content="" />
 
@@ -38,7 +41,10 @@ const HeadCustom = ({ share }) => (
             />
         )}
 
-        <meta itemProp="name" content={`${process.env.NAME}|${process.env.TITLE}`} />
+        <meta
+            itemProp="name"
+            content={`${process.env.NAME}|${process.env.TITLE}`}
+        />
         <meta itemProp="description" content="" />
 
         {share && share._id && (

@@ -8,7 +8,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMoon as moonSolid } from "@fortawesome/free-solid-svg-icons";
 import { faMoon as moonRegular } from "@fortawesome/free-regular-svg-icons";
 
-const user_twitter = "aioigzo"
 
 const Header = ({ countCoffees, prefersDark }) => {
     const [darkMode, setDarkMode] = useState("");
@@ -20,6 +19,7 @@ const Header = ({ countCoffees, prefersDark }) => {
 
         window.localStorage.setItem("darkMode", darkMode);
         document.body.dataset.theme = darkMode || prefersDark;
+        
     }, [darkMode]);
 
     return (
@@ -27,9 +27,9 @@ const Header = ({ countCoffees, prefersDark }) => {
             <div className={style.header}>
                 <div className={style.profileImg}></div>
                 <div className={style.informationContainer}>
-                    <div className={style.name}>@DamianCatanzaro</div>
+                <div className={style.name}>{process.env.TWITTER}</div>
                     <div className={style.countCoffees}>
-                        {countCoffees} cafecitos ☕️
+                        {countCoffees} birras <img src='/static/imgs/emoji_birra.png' width="30px" height="30px"/>
                     </div>
                 </div>
 
@@ -44,9 +44,8 @@ const Header = ({ countCoffees, prefersDark }) => {
             </div>
 
             <div className={style.twitter}>
-                <Follow username={user_twitter} />
-
-            </div>  
+                <Follow username="aioigzo" />
+            </div>
         </header>
     );
 };

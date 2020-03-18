@@ -71,7 +71,7 @@ const Coffee = ({ setShare, coffee, loadNewCoffees, password, isAdmin }) => {
                         {coffee.name ? coffee.name : "Anónimo"}
                         <span>
                             {` regaló ${coffee.countCoffees} ${
-                                coffee.countCoffees > 1 ? "cafés" : "café"
+                                coffee.countCoffees > 1 ? "birras" : "birra"
                             }`}
                             {SHOW_DATE_COFFEE &&
                                 ` el ${dayjs(coffee.createdAt).format(

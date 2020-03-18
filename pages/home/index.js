@@ -17,6 +17,7 @@ import { faCopy } from "@fortawesome/free-solid-svg-icons";
 
 import style from "./style.scss";
 
+
 const fetchCoffees = async query => {
     const arQueries = query || queryConvert();
 
@@ -198,7 +199,7 @@ class Home extends React.Component {
 
                 <Post />
 
-                <h3 className={style.title}>Cafés</h3>
+                <h3 className={style.title}>Birras</h3>
                 {coffees.coffees.map((coffee, key) => (
                     <Coffee
                         setShare={this.setShare}
@@ -212,7 +213,7 @@ class Home extends React.Component {
 
                 {!coffees.countCoffees && (
                     <div className={style.waitingCoffee}>
-                        <span>En espera ☕️</span>
+                        <span>En espera <img src='/static/imgs/emoji_birra.png' width="30px" height="30px"/></span> 
                     </div>
                 )}
 
@@ -242,7 +243,7 @@ class Home extends React.Component {
                             {share.name ? share.name : "Anónimo"}
                             <span>
                                 {` regaló ${share.countCoffees} ${
-                                    share.countCoffees > 1 ? "cafés" : "café"
+                                    share.countCoffees > 1 ? "birras" : "birra"
                                 }`}
                                 {SHOW_DATE_COFFEE &&
                                     ` el ${dayjs(share.createdAt).format(

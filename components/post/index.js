@@ -1,7 +1,7 @@
 import React from "react";
-import ReactMarkdown from "react-markdown"
+import ReactMarkdown from "react-markdown";
 import style from "./style.scss";
-import input from 'raw-loader!../../README.md';
+import input from "raw-loader!../../README.md";
 
 const Post = () => (
     <div className={style.postContainer}>

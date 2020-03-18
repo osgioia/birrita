@@ -24,6 +24,7 @@ const InputText = () => {
         window.location.href = result.data.mercadoPagoLink;
     };
 
+    
     const tmpCountCoffees = countCoffees ? countCoffees : 1;
     const priceCoffee = tmpCountCoffees * price;
 
@@ -31,11 +32,12 @@ const InputText = () => {
         <header className={style.inputText}>
             {loading ? (
                 <div className={style.loading}>
-                    <span>Creando café...</span>
+                    <span>Creando Birra...</span>
                 </div>
             ) : (
                 <>
-                    <span>¡Ayudame con un café ☕️!</span>
+
+                    <span>¡Ayudame con una birra <img src='/static/imgs/emoji_birra.png' width="30px" height="30px"/>!</span>
 
                     <div className={style.containerInputCoffee}>
                         <div className={style.imageCoffee}>
@@ -44,7 +46,7 @@ const InputText = () => {
                                 height="50"
                                 alt=""
                             />
-                            <span>$50</span>
+                            <span>${price}</span>
                         </div>
 
                         <span className={style.multiplier}>x</span>
@@ -141,7 +143,7 @@ const InputText = () => {
                     ></textarea>
                     <button onClick={sendCoffee}>
                         {`Invitame ${tmpCountCoffees} ${
-                            parseInt(tmpCountCoffees) > 1 ? "cafés" : "café"
+                            parseInt(tmpCountCoffees) > 1 ? "birras" : "birra"
                         } ($${priceCoffee})`}
                     </button>
                 </>

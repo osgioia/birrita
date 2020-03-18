@@ -66,7 +66,7 @@ class CoffeeService {
             content: {
                 name: coffee.name ? coffee.name : "Anónimo",
                 countCoffees: `regaló ${coffee.countCoffees} ${
-                    coffee.countCoffees > 1 ? "cafés" : "café"
+                    coffee.countCoffees > 1 ? "birras" : "birra"
                 }`,
                 message: coffee.message,
             },
