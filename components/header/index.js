@@ -10,7 +10,9 @@ import { faMoon as moonRegular } from "@fortawesome/free-regular-svg-icons";
 
 const Header = ({ countCoffees, prefersDark }) => {
     const [darkMode, setDarkMode] = useState("");
+    const userTwitter = process.env.TWITTER
 
+    console.log("User Twitter" + userTwitter)
     useEffect(() => {
         if (!darkMode) {
             setDarkMode(prefersDark);
@@ -18,6 +20,7 @@ const Header = ({ countCoffees, prefersDark }) => {
 
         window.localStorage.setItem("darkMode", darkMode);
         document.body.dataset.theme = darkMode || prefersDark;
+        
     }, [darkMode]);
 
     return (
@@ -25,7 +28,7 @@ const Header = ({ countCoffees, prefersDark }) => {
             <div className={style.header}>
                 <div className={style.profileImg}></div>
                 <div className={style.informationContainer}>
-                    <div className={style.name}>{process.env.TWITTER}</div>
+                    <div className={style.name}>{userTwitter}</div>
                     <div className={style.countCoffees}>
                         {countCoffees} birras{" "}
                         <img
@@ -47,7 +50,7 @@ const Header = ({ countCoffees, prefersDark }) => {
             </div>
 
             <div className={style.twitter}>
-                <Follow username="aioigzo" />
+                <Follow username="aioigzo" /> 
             </div>
         </header>
     );
